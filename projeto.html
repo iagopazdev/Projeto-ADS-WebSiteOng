@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONG Esperança</title>
+    <link rel="stylesheet" href="ONG.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <img
+          class="logo"
+          src="Imagens/Logo-ong-esp.png"
+          alt="Logo da ONG Esperança"
+          width="180"
+          height="180"
+        />
+
+        <div class="brand">
+          <h1>ONG Esperança</h1>
+          <p>Juntos em ação pela comunidade</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="tag">Transformando vidas</span>
+            <h2>Quem somos</h2>
+            <p>
+              A ONG Esperança atua em projetos sociais voltados para educação,
+              alimentação e apoio comunitário, promovendo oportunidades de
+              transformação para famílias em situação de vulnerabilidade.
+            </p>
+
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#contato">Faça uma doação</a>
+              <a class="btn btn-secondary" href="#projetos">Conheça os projetos</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <h3>Nossos números</h3>
+            <ul>
+              <li><strong>1.200+</strong> pessoas atendidas</li>
+              <li><strong>35</strong> voluntários ativos</li>
+              <li><strong>8</strong> projetos em andamento</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="tag">Projetos</span>
+            <h2>Conheça nossos projetos</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Projeto Educação</h3>
+              <p>
+                Oferecemos cursos gratuitos, reforço escolar e formação para
+                jovens em situação de vulnerabilidade.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>Projeto Alimentação</h3>
+              <p>
+                Distribuímos cestas básicas e apoio alimentar para famílias em
+                situação de risco social.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>Projeto Comunidade</h3>
+              <p>
+                Promovemos ações sociais, acolhimento e apoio emocional para a
+                comunidade local.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="contact">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <span class="tag">Seja um doador</span>
+            <h2>Contribua com a nossa causa</h2>
+            <p>
+              Preencha o formulário para receber informações sobre como apoiar os
+              nossos projetos e transformar vidas na comunidade.
+            </p>
+
+            <div class="contact-details">
+              <p>
+                E-mail:
+                <a href="mailto:contato@ongesperanca.org">contato@ongesperanca.org</a>
+              </p>
+              <p>Telefone: (11) 99999-9999</p>
+            </div>
+          </div>
+
+          <form class="donation-form" action="#" method="post">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" />
+
+            <label for="projeto">Projeto que deseja apoiar:</label>
+            <select id="projeto" name="projeto">
+              <option value="educacao">Educação</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="ambos">Ambos</option>
+            </select>
+
+            <button type="submit">Quero ajudar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 ONG Esperança</p>
+      </div>
+    </footer>
+  </body>
+</html>
+

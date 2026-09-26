@@ -21,7 +21,8 @@ A página da ONG Esperança reúne uma apresentação institucional, indicadores
 ## Tecnologias
 
 - HTML5
-- CSS3, incluindo CSS Grid, Flexbox, variáveis customizadas e media queries
+- CSS3, incluindo CSS Grid, Flexbox, variáveis customizadas, media queries e transições
+- JavaScript para controlar o menu hambúrguer responsivo
 
 O projeto é estático: não possui backend nem processamento real de doações ou envio do formulário.
 
@@ -94,6 +95,9 @@ A folha de estilos contém cinco cenários responsivos:
 | `min-width: 768px` | Cabeçalho em uma linha; apresentação e contato lado a lado. |
 | `min-width: 1024px` | Projetos em três colunas e mais espaço para a apresentação. |
 | `min-width: 1440px` | Container ampliado e proporções ajustadas para telas panorâmicas. |
+| `max-width: 767px` | Exibe o botão hambúrguer e transforma a navegação em menu recolhível. |
+
+No desktop, o submenu de projetos aparece ao passar o cursor ou ao navegar por foco (`:hover` e `:focus-within`). Em telas menores que 768 px, o botão altera `aria-expanded` e a classe `.is-active` da navegação; os links do submenu ficam disponíveis dentro do menu aberto. A interação também permite fechar com Escape, clique fora do menu ou seleção de um link.
 
 ## Uso de Flexbox
 
@@ -105,6 +109,18 @@ O Flexbox complementa o Grid no alinhamento interno dos componentes:
 - `.hero-card ul`: organiza os indicadores verticalmente.
 - `.hero-card li`: alinha número e rótulo, permitindo quebra quando necessário.
 - `.project-card`: empilha título e descrição com espaçamento uniforme.
+
+## Componentes de feedback
+
+- `.project-badge`: identifica projetos em andamento com uma cor semântica da paleta.
+- `.form-alert[role="alert"]`: resume erros no envio e direciona o foco para o primeiro campo inválido.
+- `.field-message`: apresenta feedback associado ao campo por `aria-describedby`; `aria-invalid` informa erro às tecnologias assistivas.
+- `.toast[role="status"]`: confirma a validação por até seis segundos e pode ser fechada manualmente. A mensagem explicita que o protótipo não envia nem armazena dados.
+- `dialog#feedback-dialog`: explica o comportamento demonstrativo do formulário; usa o elemento nativo `<dialog>`.
+
+O JavaScript atual valida os campos no navegador. Em uma integração futura, o backend poderá atualizar essas mesmas regiões com estados de processamento, sucesso ou falha da requisição, sem alterar a estrutura visual ou anunciar uma confirmação antes da resposta real do servidor.
+
+Capturas mobile dos estados de feedback: `alertaincorreto.jpeg`, `validação.jpeg` e `file.jpeg`.
 
 ## Como visualizar
 

@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONG Esperança</title>
-    <link rel="stylesheet" href="ONG.css" />
-    <script src="ONG.js" defer></script>
+    <link rel="stylesheet" href="../css/ONG.css" />
+    <script type="module" src="../js/bootstrap.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
     <header class="site-header">
       <div class="container header-content">
         <img
           class="logo"
-          src="Imagens/Logo-ong-esp.png"
+          src="../imagens/Logo-ong-esp.webp"
           alt="Logo da ONG Esperança"
           width="180"
           height="180"
@@ -53,7 +55,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section id="inicio" class="hero">
         <div class="container hero-content">
           <div class="hero-text">
@@ -89,34 +91,14 @@
             <h2>Conheça nossos projetos</h2>
           </div>
 
-          <div class="project-grid">
-            <article id="projeto-educacao" class="project-card">
-              <span class="project-badge">Em andamento</span>
-              <h3>Projeto Educação</h3>
-              <p>
-                Oferecemos cursos gratuitos, reforço escolar e formação para
-                jovens em situação de vulnerabilidade.
-              </p>
+          <div class="project-grid" id="project-grid"></div>
+          <template id="project-card-template">
+            <article class="project-card">
+              <span class="project-badge"></span>
+              <h3></h3>
+              <p></p>
             </article>
-
-            <article id="projeto-alimentacao" class="project-card">
-              <span class="project-badge">Em andamento</span>
-              <h3>Projeto Alimentação</h3>
-              <p>
-                Distribuímos cestas básicas e apoio alimentar para famílias em
-                situação de risco social.
-              </p>
-            </article>
-
-            <article id="projeto-comunidade" class="project-card">
-              <span class="project-badge">Em andamento</span>
-              <h3>Projeto Comunidade</h3>
-              <p>
-                Promovemos ações sociais, acolhimento e apoio emocional para a
-                comunidade local.
-              </p>
-            </article>
-          </div>
+          </template>
         </div>
       </section>
 
@@ -176,6 +158,7 @@
                 name="telefone"
                 aria-describedby="telefone-feedback"
                 aria-invalid="false"
+                title="Use de 8 a 15 dígitos; são permitidos espaços e os símbolos + ( ) . -"
               />
               <p class="field-message" id="telefone-feedback" aria-live="polite"></p>
             </div>
@@ -193,6 +176,18 @@
                 <option value="ambos">Ambos</option>
               </select>
               <p class="field-message" id="projeto-feedback" aria-live="polite"></p>
+            </div>
+
+            <div class="preference-field">
+              <label class="remember-choice" for="remember-project">
+                <input
+                  type="checkbox"
+                  id="remember-project"
+                  aria-describedby="preference-feedback"
+                />
+                <span>Lembrar esta escolha neste navegador</span>
+              </label>
+              <p class="field-message" id="preference-feedback" aria-live="polite"></p>
             </div>
 
             <button type="submit">Quero ajudar</button>
@@ -217,6 +212,7 @@
     </dialog>
 
     <div class="toast-region" aria-live="polite" aria-atomic="false"></div>
+    <p class="route-status visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
 
     <footer class="site-footer">
       <div class="container">

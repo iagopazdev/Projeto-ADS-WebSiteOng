@@ -1,0 +1,46 @@
+name: Relato de bug
+description: Registre um comportamento incorreto ou uma regressão.
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: "Descreva um problema reproduzível. Não inclua dados pessoais reais."
+  - type: textarea
+    id: summary
+    attributes:
+      label: Resumo
+      description: O que está acontecendo?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Abra...
+        2. Selecione...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado observado
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Navegador, versão e viewport
+      placeholder: Firefox 130, Linux, 390 x 844
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Impacto de acessibilidade
+      description: Indique se afeta teclado, leitor de tela, contraste ou zoom.

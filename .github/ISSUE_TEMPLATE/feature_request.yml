@@ -1,0 +1,34 @@
+name: Solicitação de melhoria
+description: Proponha uma melhoria relacionada aos objetivos do projeto.
+title: "feat: "
+body:
+  - type: markdown
+    attributes:
+      value: "Explique o problema e o resultado desejado, sem incluir dados pessoais."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Necessidade
+      description: Que dificuldade do usuário esta proposta resolveria?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solução proposta
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceitação
+      description: Liste resultados observáveis que indicarão que a tarefa está concluída.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Considerações de acessibilidade e responsividade
